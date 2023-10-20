@@ -18,13 +18,13 @@ const Navber = () => {
     const links=<>
     <NavLink  className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
-  } to={'/'}> <span className='mr-6'>Home</span></NavLink>
+  } to={'/'}> <span className='mr-6 text-2xl'>Home</span></NavLink>
     <NavLink  className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
-  } to={'/addproduct'}> <span className='mr-6'>Add Product</span></NavLink>
+  } to={'/addproduct'}> <span className='mr-6 text-2xl'>Add Product</span></NavLink>
     <NavLink  className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-600 underline" : ""
-  } to={'/mycart'}> <span className='mr-6'>My Cart</span></NavLink>
+  } to={'/mycart'}> <span className='mr-6 text-2xl'>My Cart</span></NavLink>
     </>
     return (
         <div>
@@ -38,7 +38,7 @@ const Navber = () => {
         {links}
       </ul>
     </div>
-   <img className='h-20 w-32 bg-orange-600 rounded-lg' src="https://i.ibb.co/t4Pvn6G/my-phone.png" alt="" />
+   <img className='h-20 w-44 bg-orange-600 rounded-lg' src="https://i.ibb.co/9941cZ8/techshop-logo.webp" alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
