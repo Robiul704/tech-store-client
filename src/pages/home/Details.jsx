@@ -1,5 +1,6 @@
 
 import { NavLink, useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Details = () => {
  
@@ -21,17 +22,19 @@ const Details = () => {
            })
            .then(res=>res.json())
            .then(data=>console.log(data))
+
+           toast('you are successfully add to your cart')
     }
   
     return (
         <div >
-            <div className="card card-side  m-10 p-10 grid lg:grid-cols-2">
+            <div className="card card-side bg-orange-300  m-10 p-10 grid lg:grid-cols-2">
   <figure><img src={details.image} alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="card-title text-3xl font-bold my-3">brand: {details.brand}</h2>
     <h2 className="card-titl text-3xl font-bold my-3">name: {details.name}</h2>
     <h2 className="card-title text-3xl font-bold my-3">type: {details.type}</h2>
-    <h2 className="card-title text-3xl font-bold my-3">price: {details.price}</h2>
+    <h2 className="card-title text-3xl font-bold my-3">price:$ {details.price}</h2>
     <h2 className="card-title text-3xl font-bold my-3">rating: {details.rating}</h2>
     <h2 className="card-title text-3xl font-bold my-3">{details.description}</h2>
 
