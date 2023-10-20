@@ -19,6 +19,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Error from "./Error";
 import Update from "./pages/home/Update";
+import Details from "./pages/home/Details";
 
 
 
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
      {
       path:'/update/:id',
       element:<Update></Update>,
+      loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+     },
+     {
+      path:'/details/:id',
+      element:<Details></Details>,
       loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
      }
    

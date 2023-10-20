@@ -68,7 +68,9 @@ const Products = () => {
           <h1 className="text-xl">price:${product.price}</h1>
           <h1 className="text-xl">rating:{product.rating}</h1>
           <div className="card-actions justify-end">
-          <button className="btn-outline py-3 px-2 rounded-lg bg-orange-300 text-xl font-bold text-white">Details</button>
+         <NavLink to={`/details/${product._id}`}>
+         <button className="btn-outline py-3 px-2 rounded-lg bg-orange-300 text-xl font-bold text-white">Details</button>
+         </NavLink>
          <NavLink to={`/update/${product._id}`}> <button className="btn-outline py-3 px-2 rounded-lg bg-sky-600 text-xl font-bold text-white">Update</button></NavLink>
           </div>
         </div>
