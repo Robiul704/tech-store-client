@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider';
 import auth from '../../firebase.config';
+import { CgProfile } from 'react-icons/Cg';
 
 const Navber = () => {
   const {user,signout}=useContext(AuthContext)
@@ -38,7 +39,7 @@ const Navber = () => {
         {links}
       </ul>
     </div>
-   <img className='h-20 w-44 bg-orange-600 rounded-lg' src="https://i.ibb.co/9941cZ8/techshop-logo.webp" alt="" />
+   <img className='h-20 w-44  rounded-lg' src="https://i.ibb.co/M7924RD/tech-store-logo-png-transparent.png" alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -49,9 +50,12 @@ const Navber = () => {
   {
     user? <div className='flex justify-center gap-3 items-center'>
       <p>{user.email}</p>
-      <img className='h-10 w-10 rounded-full' src={user.photoURL} alt="" />
-      <NavLink><button onClick={handlesignout} className='btn btn-primary'>signout</button></NavLink>
-    </div> : <NavLink to={'/signin'}><button className='btn btn-primary'>Login</button></NavLink>
+      {
+        user.photoURL? <div> <img className='h-10 w-10 rounded-full' src={user.photoURL} alt="" /></div>:<p className='text-4xl '> <CgProfile/> </p>
+      }
+     
+      <NavLink><button onClick={handlesignout} className='btn btn-outline'>signout</button></NavLink>
+    </div> : <NavLink to={'/signin'}><button className='btn btn-outline'>Login</button></NavLink>
   }
   </div>
 </div>

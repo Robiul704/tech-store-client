@@ -39,7 +39,7 @@ const Details = () => {
     <h2 className="card-title text-3xl font-bold my-3">{details.description}</h2>
 
     <div className="card-actions justify-end">
-      <NavLink to={`/mycart/${details.name}`}>
+      <NavLink >
       <button onClick={handleaddcart} className="btn btn-outline w-full   px-5 bg-blue-600 text-white font-bold text-2xl">Add to cart</button>
       </NavLink>
     </div>
@@ -50,3 +50,5 @@ const Details = () => {
 };
 
 export default Details;
+
+// to={`/mycart/${details.name}`}

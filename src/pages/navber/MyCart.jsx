@@ -30,12 +30,10 @@ const MyCart = () => {
 
 
             {
-                datas.map(data=><div key={data._id}><div className="p-5 m-10 bg-blue-400 card-actions">
+                datas.map(data=><div key={data._id}><div className="p-5  flex-col justify-between m-10 bg-blue-400 h-76 card-actions">
                 <div className="card  card-side bg-red-300  m-10 p-10 grid gap-10">
-                <img className=" w-full" src={data.image} alt="" />
-                <div>
-                 
-                 </div>
+                <img className=" w-full h-44" src={data.image} alt="" />
+               
                 <div>
                 <h1 className="text-4xl font-bold">{data.name}</h1>
                  <h1 className="text-4xl font-bold">Brand:{data.brand}</h1>
