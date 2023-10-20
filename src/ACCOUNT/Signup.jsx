@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../firebase.config";
 import { FcGoogle } from 'react-icons/fc';
 
 const Signup = () => {
- 
+  const location=useLocation()
+  const navigate=useNavigate()
     const {createuser,googlesinin}=useContext(AuthContext)
     const handlesignup=(e)=>{
         e.preventDefault()
@@ -32,6 +33,7 @@ const Signup = () => {
         createuser(email,password)
         .then(result=>{
             console.log(result)
+            navigate(location.state ? location.state : '/')
             toast.error('user created successfully', {
         position: toast.POSITION.TOP_CENTER,
       });

@@ -14,7 +14,7 @@ const Signin = () => {
         e.preventDefault()
         const email=e.target.email.value
         const password=e.target.password.value
-        e.reset()
+        e.target.reset()
         signinuser(email,password)
         .then(result=>{
             console.log(result)
