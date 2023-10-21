@@ -20,7 +20,7 @@ const Update = () => {
         console.log(info)
        
 
-        fetch(`http://localhost:5000/product/${_id}`,{
+        fetch(` https://brand-shop-webside-server.vercel.app/product/${_id}`,{
             method:'PUT',
             headers:{
                 "content-type":"application/json"

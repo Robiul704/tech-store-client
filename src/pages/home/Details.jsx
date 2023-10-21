@@ -13,7 +13,7 @@ const Details = () => {
 
 
     const handleaddcart=()=>{
-        fetch(`http://localhost:5000/mycart`,{
+        fetch(` https://brand-shop-webside-server.vercel.app/mycart`,{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -28,9 +28,9 @@ const Details = () => {
   
     return (
         <div >
-            <div className="card card-side bg-orange-300  m-10 p-10 grid lg:grid-cols-2">
-  <figure><img src={details.image} alt="Movie"/></figure>
-  <div className="card-body">
+            <div className="card card-side bg-orange-300  m-10 p-10 grid  lg:grid-cols-2">
+  <figure><img  src={details.image} alt="Movie"/></figure>
+  <div className="card-body ">
     <h2 className="card-title text-3xl font-bold my-3">brand: {details.brand}</h2>
     <h2 className="card-titl text-3xl font-bold my-3">name: {details.name}</h2>
     <h2 className="card-title text-3xl font-bold my-3">type: {details.type}</h2>

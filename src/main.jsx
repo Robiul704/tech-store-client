@@ -3,7 +3,6 @@ import * as ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  useParams,
 } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/home/Home";
@@ -32,7 +31,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/brand')
+        loader:()=>fetch(' https://brand-shop-webside-server.vercel.app/brand')
       },
      {
       path:'/addproduct',
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
      {
       path:'/mycart/:name',
       element:<Private><MyCart></MyCart></Private>,
-      loader:({params})=>fetch(`http://localhost:5000/mycart/${params.name}`)
+      loader:({params})=>fetch(` https://brand-shop-webside-server.vercel.app/mycart/${params.name}`)
      },
      {
       path:'/mycart',
@@ -59,17 +58,17 @@ const router = createBrowserRouter([
      {
       path:'/product/:brand',
       element:<Products></Products>,
-      loader:({params})=>fetch(`http://localhost:5000/product/${params.brand}`)
+      loader:({params})=>fetch(` https://brand-shop-webside-server.vercel.app/product/${params.brand}`)
      },
      {
       path:'/update/:id',
       element:<Private><Update></Update></Private>,
-      loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+      loader:({params})=>fetch(`https://brand-shop-webside-server.vercel.app/products/${params.id}`)
      },
      {
       path:'/details/:id',
       element:<Private><Details></Details></Private>,
-      loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+      loader:({params})=>fetch(` https://brand-shop-webside-server.vercel.app/products/${params.id}`)
      }
    
     
