@@ -8,3 +8,5 @@ Technology and Electronics Brand shop
 - this webside here are responsibe you can use this in mobile and laptop/pc.on the navbar you can see the add product my cart loging logout and a logo.
 - this webside making firebase authentication to the security.
 - if you click the add to cart button then you will see the my cart section.you can delete a prooduct to this webside.
+
+# Technology: React JS, React router Dom, Tailwind, Firebase, NodeJS, Vercel, MongoDB.
